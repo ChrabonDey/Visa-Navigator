@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { authContext } from "../AuthProvider/AuthProvider"; // Assuming you have a context for user data
+import { authContext } from "../AuthProvider/AuthProvider";
 
 const VisaApplications = () => {
   const { user } = useContext(authContext); 
@@ -9,7 +9,7 @@ const VisaApplications = () => {
 
   useEffect(() => {
     const fetchApplications = async () => {
-      if (!user?.email) return; // Exit if user is not logged in
+      if (!user?.email) return; 
 
       try {
         const response = await fetch(`http://localhost:4000/user-visas?email=${user.email}&searchParams=${search}`);
