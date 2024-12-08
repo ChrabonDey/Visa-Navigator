@@ -42,7 +42,7 @@ const VisaApplications = () => {
       <h1 className="text-3xl font-bold text-center mb-8">My Visa Applications</h1>
       
       <div className="mb-4">
-        {/* Search input field */}
+        
         <input
           type="text"
           value={search}
