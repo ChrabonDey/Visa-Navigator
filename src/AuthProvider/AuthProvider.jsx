@@ -18,7 +18,7 @@ const AuthProvider = ({ routes }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Handle user registration
+  
   const handleRegister = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
