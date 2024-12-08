@@ -119,7 +119,7 @@ Welcome to **Visa Navigator**, a user-friendly web application that simplifies t
 ---
 
 ## 🤝 **Contributors**  
-- [Your Name](https://github.com/your-profile)  
+- [Chrabon Dey](https://github.com/ChrabonDey)  
 
 ---
 
