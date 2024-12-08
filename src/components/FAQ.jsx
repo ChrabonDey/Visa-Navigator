@@ -29,7 +29,7 @@ const FAQ = () => {
             </div>
             <div className="collapse-content text-gray-600">
               <p>
-                The processing time can vary based on the country and the type of visa you are applying for. It typically ranges from a few weeks to a few months. We recommend applying early to avoid delays.
+                The processing time can vary bases on the country and the type of visa you are applying for. It typically ranges from a few weeks to a few months. We recommend applying early to avoid delays.
               </p>
             </div>
           </div>
