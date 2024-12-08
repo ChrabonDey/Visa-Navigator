@@ -49,7 +49,7 @@ const AuthProvider = ({ routes }) => {
     return signInWithPopup(auth, googleProvider);
   };
 
-  // Manage user profile
+  
   const manageProfile = (name, photo) => {
     return updateProfile(auth.currentUser, {
       displayName: name,
