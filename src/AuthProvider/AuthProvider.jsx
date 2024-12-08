@@ -23,7 +23,7 @@ const AuthProvider = ({ routes }) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  // Handle user login
+  
   const handleLogin = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
