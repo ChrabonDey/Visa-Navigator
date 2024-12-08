@@ -2,9 +2,9 @@ import React, { useState, useEffect, useContext } from "react";
 import { authContext } from "../AuthProvider/AuthProvider"; // Assuming you have a context for user data
 
 const VisaApplications = () => {
-  const { user } = useContext(authContext); // Get logged-in user data from context
+  const { user } = useContext(authContext); 
   const [applications, setApplications] = useState([]);
-  const [search, setSearch] = useState("");  // State to store the search term
+  const [search, setSearch] = useState(""); 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const VisaApplications = () => {
       } catch (error) {
         console.error("Error fetching applications:", error);
       } finally {
-        setLoading(false); // Stop loading after the request is complete
+        setLoading(false); 
       }
     };
 
