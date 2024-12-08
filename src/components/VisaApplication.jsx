@@ -27,10 +27,10 @@ const VisaApplications = () => {
     };
 
     fetchApplications();
-  }, [search, user?.email]); // Run whenever the search or user email changes
+  }, [search, user?.email]); 
 
   const handleSearchChange = (event) => {
-    setSearch(event.target.value); // Update search query
+    setSearch(event.target.value); 
   };
 
   if (loading) {
