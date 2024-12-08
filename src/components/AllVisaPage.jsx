@@ -23,7 +23,7 @@ const AllVisaPage = () => {
           All Visas
         </h1>
 
-        {/* Dropdown menu for filtering visas */}
+       
         <div className="mb-6 flex justify-center">
           <select
             value={selectedVisaType}
