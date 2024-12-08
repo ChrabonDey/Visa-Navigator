@@ -28,7 +28,7 @@ const AuthProvider = ({ routes }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  // Handle password reset
+ 
   const handleResetPassword = (email) => {
     return sendPasswordResetEmail(auth, email);
   };
