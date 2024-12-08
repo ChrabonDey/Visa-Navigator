@@ -33,7 +33,7 @@ const AuthProvider = ({ routes }) => {
     return sendPasswordResetEmail(auth, email);
   };
 
-  // Handle user logout
+
   const handleLogout = async () => {
     try {
       console.log("Attempting logout...");
