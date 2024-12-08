@@ -35,7 +35,7 @@ const LatestVisa = () => {
             return (
               <Fade key={_id} bottom triggerOnce>
                 <div className="card bg-white shadow-lg rounded-lg">
-                  {/* Country Image */}
+                 
                   <figure>
                     <img
                       src={countryImage}
@@ -44,7 +44,7 @@ const LatestVisa = () => {
                     />
                   </figure>
 
-                  {/* Visa Details */}
+                 
                   <div className="p-4">
                     <h2 className="text-lg font-bold text-gray-800 mb-2">
                       {countryName}
@@ -65,7 +65,7 @@ const LatestVisa = () => {
                       <strong>Application Method:</strong> {applicationMethod}
                     </p>
 
-                    {/* See Details Button with Slide-in Animation */}
+                   
                     <Slide direction="up" triggerOnce>
                       <button
                         onClick={() => navigate(`/visa-details/${_id}`)}
@@ -81,7 +81,7 @@ const LatestVisa = () => {
           })}
         </div>
 
-        {/* See All Visas Button with Zoom Animation */}
+      
         <div className="mt-10 flex justify-center">
           <Zoom triggerOnce>
             <button
