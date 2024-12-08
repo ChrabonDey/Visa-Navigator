@@ -8,7 +8,7 @@ const FAQ = () => {
           Frequently Asked Questions
         </h2>
         <div className="space-y-8">
-          {/* Accordion 1 */}
+       
           <div className="collapse collapse-arrow bg-base-200">
             <input type="radio" name="faq-accordion" defaultChecked />
             <div className="collapse-title text-xl font-semibold text-gray-800">
@@ -21,7 +21,7 @@ const FAQ = () => {
             </div>
           </div>
 
-          {/* Accordion 2 */}
+         
           <div className="collapse collapse-arrow bg-base-200">
             <input type="radio" name="faq-accordion" />
             <div className="collapse-title text-xl font-semibold text-gray-800">
@@ -34,7 +34,7 @@ const FAQ = () => {
             </div>
           </div>
 
-          {/* Accordion 3 */}
+          
           <div className="collapse collapse-arrow bg-base-200">
             <input type="radio" name="faq-accordion" />
             <div className="collapse-title text-xl font-semibold text-gray-800">
@@ -47,7 +47,7 @@ const FAQ = () => {
             </div>
           </div>
 
-          {/* Accordion 4 */}
+         
           <div className="collapse collapse-arrow bg-base-200">
             <input type="radio" name="faq-accordion" />
             <div className="collapse-title text-xl font-semibold text-gray-800">
