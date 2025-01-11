@@ -5,7 +5,7 @@ Welcome to **Visa Navigator**, a user-friendly web application that simplifies t
 ---
 
 ## 🔗 **Live Website**  
-[Visit Visa Navigator](https://visa-navigator-896db.web.app/) *(Add the live site URL here)*  
+[Visit Visa Navigator](https://visa-navigator-896db.web.app/)  
 
 ---
 
