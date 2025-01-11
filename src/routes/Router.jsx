@@ -22,7 +22,7 @@ const Router=createBrowserRouter([
             {
                 path:"/",
                 element:<Home></Home>,
-                loader:()=>fetch('http://localhost:4000/add-visa')
+                loader:()=>fetch('https://visa-navigator-server-eta.vercel.app/add-visa')
             },
             {
                 path:"/add-visa",
@@ -31,7 +31,7 @@ const Router=createBrowserRouter([
             {
                 path:"/all-visas",
                 element:<AllVisaPage></AllVisaPage>,
-                loader:()=>fetch('http://localhost:4000/add-visa')
+                loader:()=>fetch('https://visa-navigator-server-eta.vercel.app/add-visa')
             },
             {
                 path: "/visa-details/:id",
@@ -41,7 +41,7 @@ const Router=createBrowserRouter([
                   </PrivateRoute>
                 ),
                 loader: ({ params }) =>
-                  fetch(`http://localhost:4000/add-visa/${params.id}`),
+                  fetch(`https://visa-navigator-server-eta.vercel.app/add-visa/${params.id}`),
               },
               {
                 path:'/visa-application',

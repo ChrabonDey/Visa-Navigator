@@ -3,6 +3,7 @@ import Banner from './Banner';
 import LatestVisa from './LatestVisa';
 import VisaTips from './VisaTips';
 import FAQ from './FAQ';
+import Count from './Count';
 
 const Home = () => {
  
@@ -35,6 +36,7 @@ const Home = () => {
       <section className="text-gray-800 dark:text-gray-100">
        
         <Banner />
+        <Count></Count>
       </section>
       <section className="mt-10 text-gray-800 dark:text-gray-100">
         <LatestVisa />

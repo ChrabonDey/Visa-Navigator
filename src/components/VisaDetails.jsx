@@ -44,7 +44,7 @@ const VisaDetails = () => {
       },
     };
 
-    fetch("http://localhost:4000/apply-visa", {
+    fetch("https://visa-navigator-server-eta.vercel.app/apply-visa", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(applicationData),

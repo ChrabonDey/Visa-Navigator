@@ -25,7 +25,7 @@ const AddVisa = () => {
 
     console.log(visa);
 
-    fetch("http://localhost:4000/add-visa", {
+    fetch("https://visa-navigator-server-eta.vercel.app/add-visa", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

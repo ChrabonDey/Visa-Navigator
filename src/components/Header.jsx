@@ -2,13 +2,14 @@ import { NavLink } from "react-router-dom";
 import "../App.css";
 import { useContext } from "react";
 import { authContext } from "../AuthProvider/AuthProvider";
+import img1 from '../assets/rb_82523.png'
 
 const Header = () => {
   const { user, handleLogout } = useContext(authContext);
 
   return (
-    <div className="text-center my-4">
-      <div className="navbar w-11/12 mx-auto rounded-2xl p-2 text-black font-bold">
+    <div className="text-center">
+      <div className="navbar  rounded-2xl  text-black font-bold">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -38,29 +39,36 @@ const Header = () => {
               {user && <NavLink to="/my-visa-applications">My Visa Applications</NavLink>}
             </ul>
           </div>
-          <a className="text-2xl font-bold">
-            Visa <span className="bg-gradient-to-r from-cyan-500 to-indigo-600 bg-clip-text text-transparent">Portal</span>
-          </a>
+            <div className="flex items-center gap-3">
+              <img src={img1} alt="" className="w-8 h-8 "/>
+               <div className="font-bold text-3xl">
+                <span className="primary">Visa</span> <span className="secondary">Portal</span>
+               </div>
+            </div>
         </div>
 
-        <div className="navbar-center hidden lg:flex gap-4">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/all-visas">All Visas</NavLink>
-          {user && <NavLink to="/add-visa">Add Visa</NavLink>}
-          {user && <NavLink to="/my-added-visas">My Added Visas</NavLink>}
-          {user && <NavLink to="/visa-application">My Visa Applications</NavLink>}
+        <div className="navbar-center hidden lg:flex gap-4 ">
+          <NavLink className='hover:text-[#696B9A]'  to="/">Home</NavLink>
+          <NavLink className='hover:text-[#696B9A]' to="/all-visas">All Visas</NavLink>
+          <NavLink className='hover:text-[#696B9A]' to="/contact">Contact</NavLink>
+          <NavLink className='hover:text-[#696B9A]' to="/category">Category</NavLink>
+          <NavLink className='hover:text-[#696B9A]' to="/testimonial">Testimonial</NavLink>
+
+          {user && <NavLink className='hover:text-[#696B9A]' to="/add-visa">Add Visa</NavLink>}
+          {user && <NavLink className='hover:text-[#696B9A]' to="/my-added-visas">My Added Visas</NavLink>}
+          {user && <NavLink className='hover:text-[#696B9A]' to="/visa-application">My Visa Applications</NavLink>}
         </div>
 
         <div className="navbar-end flex items-center gap-4">
           {!user ? (
             <>
               <NavLink to="/login">
-                <button className="btn bg-gradient-to-r from-cyan-500 to-indigo-600 text-white px-6">
+                <button className="btn bg-[#1e1e60] text-white px-6 font-semibold hover:bg-[#1e1e60] hover:scale-105 ease-in-out">
                   Login
                 </button>
               </NavLink>
               <NavLink to="/register">
-                <button className="btn bg-gradient-to-r from-cyan-500 to-indigo-600 text-white px-6">
+                <button className="btn bg-[#1e1e60] text-white px-6 font-semibold hover:bg-[#1e1e60] hover:scale-105 ease-in-out">
                   Register
                 </button>
               </NavLink>
@@ -93,7 +101,7 @@ const Header = () => {
                       await handleLogout();
                       console.log("Logout button clicked");
                     }}
-                    className="btn bg-gradient-to-r from-cyan-500 to-indigo-600 text-white px-6"
+                    className="btn bg-[#1e1e60] text-white px-6 font-semibold"
                   >
                     Logout
                   </button>

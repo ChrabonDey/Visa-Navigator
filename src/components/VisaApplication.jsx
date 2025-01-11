@@ -12,7 +12,7 @@ const VisaApplications = () => {
       if (!user?.email) return; 
 
       try {
-        const response = await fetch(`http://localhost:4000/user-visas?email=${user.email}&searchParams=${search}`);
+        const response = await fetch(`https://visa-navigator-server-eta.vercel.app/user-visas?email=${user.email}&searchParams=${search}`);
         const data = await response.json();
         if (response.ok) {
           setApplications(data);

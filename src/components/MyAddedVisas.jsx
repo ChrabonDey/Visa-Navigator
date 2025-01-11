@@ -17,7 +17,7 @@ const MyAddedVisas = () => {
     if (!user) {
       navigate("/login");
     } else {
-      fetch(`http://localhost:4000/user-visas?email=${user.email}`)
+      fetch(`https://visa-navigator-server-eta.vercel.app/user-visas?email=${user.email}`)
         .then((res) => {
           if (!res.ok) throw new Error("Failed to fetch visas.");
           return res.json();
@@ -38,7 +38,7 @@ const MyAddedVisas = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:4000/delete-visa/${visaId}`, {
+        fetch(`https://visa-navigator-server-eta.vercel.app/delete-visa/${visaId}`, {
           method: "DELETE",
         })
           .then((res) => {
@@ -72,7 +72,7 @@ const MyAddedVisas = () => {
       applicationMethod: form.applicationMethod.value,
     };
 
-    fetch(`http://localhost:4000/update-visa/${currentVisa._id}`, {
+    fetch(`https://visa-navigator-server-eta.vercel.app/update-visa/${currentVisa._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updatedVisa),
