@@ -2,7 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules"; // Import Autoplay
 
 import image1 from "../assets/green-cards-passports-flat-lay.jpg";
 import image2 from "../assets/visa-application-composition-with-canadian-flag.jpg";
@@ -13,8 +13,12 @@ const Banner = () => {
     <div className="my-6 px-4 md:px-20 rounded-lg shadow-lg h-[60vh] md:h-[70vh]">
       <Swiper
         pagination={{ clickable: true }}
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]} // Include Autoplay module here
         className="w-full h-full"
+        autoplay={{
+          delay: 3000, // 3 seconds for each slide
+          disableOnInteraction: false, // Keeps autoplay active even after interaction
+        }}
       >
         {/* Slide 1 */}
         <SwiperSlide>

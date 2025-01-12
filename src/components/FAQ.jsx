@@ -2,9 +2,9 @@ import React from 'react';
 
 const FAQ = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-500 to-indigo-600 py-16">
+    <div className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-8 text-white">
+        <h2 className="text-4xl font-bold mb-8 text-black">
           Frequently Asked Questions
         </h2>
         <div className="space-y-8">

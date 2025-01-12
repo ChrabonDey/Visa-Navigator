@@ -4,16 +4,17 @@ import LatestVisa from './LatestVisa';
 import VisaTips from './VisaTips';
 import FAQ from './FAQ';
 import Count from './Count';
+import AboutVisa from './AboutVisa';
+import Testimonial from './Testimonial';
 
 const Home = () => {
- 
   const savedTheme = localStorage.getItem('theme') || 'light';
   const [theme, setTheme] = useState(savedTheme);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
-    localStorage.setItem('theme', newTheme); 
+    localStorage.setItem('theme', newTheme);
   };
 
   useEffect(() => {
@@ -23,26 +24,24 @@ const Home = () => {
 
   return (
     <div>
-      
-      <div className="fixed top-5 right-5 z-10">
-        <button
-          onClick={toggleTheme}
-          className="btn btn-primary text-white p-2 rounded-full"
-        >
-          {theme === 'light' ? '🌙' : '🌞'} 
-        </button>
-      </div>
+     
 
       <section className="text-gray-800 dark:text-gray-100">
-       
         <Banner />
-        <Count></Count>
+        <Count />
+      </section>
+      <section className="mt-8">
+        <AboutVisa />
       </section>
       <section className="mt-10 text-gray-800 dark:text-gray-100">
         <LatestVisa />
       </section>
+
       <section className="mt-10 text-gray-800 dark:text-gray-100">
         <VisaTips />
+      </section>
+      <section className="mt-10">
+        <Testimonial />
       </section>
       <section className="mt-10 text-gray-800 dark:text-gray-100">
         <FAQ />

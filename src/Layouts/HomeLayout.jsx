@@ -1,10 +1,13 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const HomeLayout = () => {
   const [isSticky, setIsSticky] = useState(false);
+  const location=useLocation();
+  const noHeaderFooter=location.pathname.includes('login')
+  const noHeaderFooters=location.pathname.includes('register')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,13 +27,14 @@ const HomeLayout = () => {
           isSticky ? "bg-white shadow-md" : "bg-transparent"
         }`}
       >
-        <div className="mx-auto max-w-[1280px] w-full">
-          <Header />
+        <div className="mx-auto px-10 py-4 w-full">
+        { noHeaderFooter || noHeaderFooters ||   <Header />}
         </div>
       </header>
       <Outlet />
+
       <section className="mt-14">
-        <Footer />
+        {noHeaderFooter || noHeaderFooters || <Footer />}
       </section>
     </div>
   );

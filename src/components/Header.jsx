@@ -50,8 +50,8 @@ const Header = () => {
         <div className="navbar-center hidden lg:flex gap-4 ">
           <NavLink className='hover:text-[#696B9A]'  to="/">Home</NavLink>
           <NavLink className='hover:text-[#696B9A]' to="/all-visas">All Visas</NavLink>
-          <NavLink className='hover:text-[#696B9A]' to="/contact">Contact</NavLink>
-          <NavLink className='hover:text-[#696B9A]' to="/category">Category</NavLink>
+          <NavLink className='hover:text-[#696B9A]' to="/about">About Us</NavLink>
+          <NavLink className='hover:text-[#696B9A]' to="/visatips">Visa Tips</NavLink>
           <NavLink className='hover:text-[#696B9A]' to="/testimonial">Testimonial</NavLink>
 
           {user && <NavLink className='hover:text-[#696B9A]' to="/add-visa">Add Visa</NavLink>}

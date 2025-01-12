@@ -13,6 +13,9 @@ import AllVisaPage from "../components/AllVisaPage";
 import VisaDetails from "../components/VisaDetails";
 import VisaApplication from "../components/VisaApplication";
 import AddedVisas from "../components/MyAddedVisas";
+import About from "../components/About";
+import Testimonial from "../components/Testimonial";
+import VisaTips from "../components/VisaTips";
 
 const Router=createBrowserRouter([
     {
@@ -32,6 +35,18 @@ const Router=createBrowserRouter([
                 path:"/all-visas",
                 element:<AllVisaPage></AllVisaPage>,
                 loader:()=>fetch('https://visa-navigator-server-eta.vercel.app/add-visa')
+            },
+            {
+                path:'/about',
+                element:<About></About>
+            },
+            {
+                path:'/testimonial',
+                element:<Testimonial></Testimonial>
+            },
+            {
+                path:'/visatips',
+                element:<VisaTips></VisaTips>
             },
             {
                 path: "/visa-details/:id",

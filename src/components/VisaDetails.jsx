@@ -65,34 +65,66 @@ const VisaDetails = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-10">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8">
-        <img src={countryImage} alt={countryName} className="w-full h-64 object-cover rounded-t-lg mb-6" />
-        <h1 className="text-3xl font-bold text-blue-600 mb-4">{countryName}</h1>
-        <p><strong>Visa Type:</strong> {visaType}</p>
-        <p><strong>Processing Time:</strong> {processingTime}</p>
-        <p><strong>Fee:</strong> ${fee}</p>
-        <p><strong>Validity:</strong> {validity}</p>
-        <p><strong>Application Method:</strong> {applicationMethod}</p>
-        <p><strong>Age Restriction:</strong> {ageRestriction}+</p>
-        <p className="mt-4">{description}</p>
-        <ul className="list-disc ml-8 mt-4">
-          {requiredDocuments.map((doc, index) => (
-            <li key={index}>{doc}</li>
-          ))}
-        </ul>
-        <button
-          className="btn btn-primary mt-6"
-          onClick={() => setIsModalOpen(true)}
-        >
-          Apply for Visa
-        </button>
+    <div className="bg-gray-100">
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex flex-wrap -mx-4">
+          {/* Image Section */}
+          <div className="w-full md:w-1/2 px-4 mb-8">
+            <img
+              src={countryImage}
+              alt={countryName}
+              className="w-full h-auto rounded-lg shadow-md mb-4"
+            />
+          
+          </div>
+
+          {/* Visa Details Section */}
+          <div className="w-full md:w-1/2 px-4">
+            <h2 className="text-3xl font-bold mb-2">{countryName}</h2>
+            <p className="text-gray-600 mb-4">{visaType}</p>
+            <div className="mb-4">
+              <span className="text-2xl font-bold mr-2">${fee}</span>
+              <span className="text-gray-500 line-through">${fee}</span>
+            </div>
+            <div className="mb-4">
+              <span className="text-xl">Processing Time: </span>
+              {processingTime}
+            </div>
+            <div className="mb-4">
+              <span className="text-xl">Validity: </span>
+              {validity}
+            </div>
+            <div className="mb-4">
+              <span className="text-xl">Age Restriction: </span>
+              {ageRestriction}+
+            </div>
+            <p className="text-gray-700 mb-6">{description}</p>
+
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">Required Documents:</h3>
+              <ul className="list-disc ml-8">
+                {requiredDocuments.map((doc, index) => (
+                  <li key={index}>{doc}</li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Apply Button */}
+            <button
+              className="btn bg-[#1e1e60] text-white px-6 font-semibold"
+              onClick={() => setIsModalOpen(true)}
+            >
+              Apply for Visa
+            </button>
+          </div>
+        </div>
       </div>
 
+      {/* Modal for Application Form */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="bg-white p-6 rounded-lg max-w-md w-full">
-            <h2 className="text-2xl font-bold text-blue-600 mb-4">Visa Application</h2>
+            <h2 className="text-2xl font-bold text-[#696B9A] mb-4">Visa Application</h2>
             <form onSubmit={handleApply} className="space-y-4">
               <div>
                 <label className="block text-sm font-medium">Email</label>
@@ -139,12 +171,12 @@ const VisaDetails = () => {
                   className="input input-bordered w-full"
                 />
               </div>
-              <button type="submit" className="btn btn-primary w-full">
+              <button type="submit" className="btn bg-[#1e1e60] text-white px-6 font-semibold w-full">
                 Apply
               </button>
               <button
                 type="button"
-                className="btn btn-secondary w-full mt-2"
+                className="btn  w-full mt-2"
                 onClick={() => setIsModalOpen(false)}
               >
                 Cancel

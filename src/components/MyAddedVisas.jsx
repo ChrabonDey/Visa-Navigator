@@ -90,58 +90,59 @@ const MyAddedVisas = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-blue-50 py-10">
+    <div className="min-h-screen  py-10">
       <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-8">
-        <h1 className="text-4xl font-bold text-blue-600 text-center mb-6">My Added Visas</h1>
+        <h1 className="text-4xl font-bold text-[#696B9A] text-center mb-6">My Added Visas</h1>
+        
+        {/* Table Section */}
         {visas.length === 0 ? (
           <p className="text-gray-500 text-center text-lg">You haven't added any visas yet.</p>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {visas.map((visa) => (
-              <div key={visa._id} className="card bg-white shadow-xl rounded-lg overflow-hidden">
-                <img
-                  src={visa.countryImage}
-                  alt={visa.country}
-                  className="w-full h-40 object-cover"
-                />
-                <div className="p-4">
-                  <h2 className="text-xl font-semibold text-gray-800">{visa.country}</h2>
-                  <p className="text-sm text-gray-600">
-                    <strong>Visa Type:</strong> {visa.visaType}
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    <strong>Processing Time:</strong> {visa.processingTime}
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    <strong>Fee:</strong> ${visa.fee}
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    <strong>Validity:</strong> {visa.validity}
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    <strong>Application Method:</strong> {visa.applicationMethod}
-                  </p>
-                  <div className="flex justify-between mt-4">
-                    <button
-                      className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
-                      onClick={() => handleOpenUpdate(visa)}
-                    >
-                      Update
-                    </button>
-                    <button
-                      className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
-                      onClick={() => handleDelete(visa._id)}
-                    >
-                      Delete
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="overflow-x-auto">
+            <table className="table-auto w-full border-collapse">
+              <thead>
+                <tr className="bg-blue-100 text-[#696B9A]">
+                  <th className="px-4 py-2 border">Country</th>
+                  <th className="px-4 py-2 border">Visa Type</th>
+                  <th className="px-4 py-2 border">Processing Time</th>
+                  <th className="px-4 py-2 border">Fee</th>
+                  <th className="px-4 py-2 border">Validity</th>
+                  <th className="px-4 py-2 border">Application Method</th>
+                  <th className="px-4 py-2 border">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {visas.map((visa) => (
+                  <tr key={visa._id} className="hover:bg-blue-50">
+                    <td className="px-4 py-2 border">{visa.country}</td>
+                    <td className="px-4 py-2 border">{visa.visaType}</td>
+                    <td className="px-4 py-2 border">{visa.processingTime}</td>
+                    <td className="px-4 py-2 border">${visa.fee}</td>
+                    <td className="px-4 py-2 border">{visa.validity}</td>
+                    <td className="px-4 py-2 border">{visa.applicationMethod}</td>
+                    <td className="px-4 py-2 border text-center">
+                      <button
+                        className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 mr-2"
+                        onClick={() => handleOpenUpdate(visa)}
+                      >
+                        Update
+                      </button>
+                      <button
+                        className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+                        onClick={() => handleDelete(visa._id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         )}
       </div>
 
+      {/* Update Modal */}
       {isModalOpen && currentVisa && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="bg-white p-6 rounded-lg max-w-lg w-full shadow-lg">

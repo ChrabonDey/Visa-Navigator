@@ -56,9 +56,9 @@ const AddVisa = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 flex items-center justify-center">
+    <div className="min-h-screen my-16 flex items-center justify-center">
       <div className="w-full max-w-4xl bg-white shadow-xl rounded-lg p-8">
-        <h2 className="text-2xl font-bold text-blue-600 mb-6">Add Visa</h2>
+        <h2 className="text-4xl font-bold text-[#696B9A] mb-8 text-center">Add Visa</h2>
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
             <label className="block text-sm font-medium text-gray-700">Country Image (URL)</label>
@@ -160,7 +160,7 @@ const AddVisa = () => {
               required
             />
           </div>
-          <button type="submit" className="btn btn-primary w-full mt-4">
+          <button type="submit" className=" btn bg-[#1e1e60] text-white px-6 font-semibold hover:bg-[#1e1e60] hover:scale-105 ease-in-out w-full">
             Add Visa
           </button>
         </form>

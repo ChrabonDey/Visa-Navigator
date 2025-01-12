@@ -18,7 +18,7 @@ const LatestVisa = () => {
             Latest Visas
           </p>
 
-          <h1 className="text-4xl text-black font-extrabold mb-14 w-2/4 mx-auto  text-center">
+          <h1 className="text-5xl md:text-4xl text-black font-bold mb-14 w-3/4 mx-auto  text-center">
             Visa Portal Gives You a Chance To Fulfil Your Dreams. 
           </h1>
 
